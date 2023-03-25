@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unicode</title>
+</head>
+<body>
+    <div id="tudo">
+    <h1>Capítulo 1</h1>
+    <p class="xpto" id="teste">Caracteres Especiais</p>
+    <p class="nav-arq" id="referencia">Arquivos exemplo: <a href="c1-write-apos-carregamento.html">&laquo; anterior</a> <a href="c1-#html">próximo &raquo;</a></p>
+    <button type="button" onclick="executar()">Mostrar caracteres</button>
+</div>
+
+<script>
+    function executar(){
+        var caractere = "\
+        Octal:.......\251,\256, \266\n\
+        Latin 1 Hexadecimal:... \xA9,\xAE, \xB6 \n\
+        Latin 1 Unicode:....\u00A9, \u00AE, \u00B6"
+        alert(caractere)
+    }
+    
+</script>
+</body>
+</html>
