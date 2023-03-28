@@ -4,25 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menor de idade</title>
+    <title>Analisando a Idade</title>
 </head>
 <body>
-    <h1>Identificador de Idade</h1>
+    <header><h1>Analisando a Idade</h1></header>
+    <p>Informe a sua idade: <input type="number" name="idade" id="idade"></p>
+    <input type="button" value="Analisar" name="btn" id="btn" onclick="analisar()">
 
-    <div id="res">
-        <p>O resultado sairá aqui:</p>
-    </div>
+    <p id="res">Informe a sua idade e clique no botão</p>
 
     <script>
-        var idade = Number(prompt('Qual é a sua idade?'))
-        var res = window.document.getElementById('res')
+        function analisar(){
+            var idade = window.document.getElementById('idade')
 
-        if(idade < 18 ){
-            res.innerHTML = (`Você tem ${idade}. Você é considerado <strong>Menor de Idade</strong>.`)
-        }else{
-            res.innerHTML = (`Você tem ${idade}. Você é um <strong>ADULTO</strong>.`)
+            var dade = Number(idade.value)
+            var res = window.document.getElementById('res')
+
+            if(dade < 18){
+                res.innerHTML = `A sua idade é ${dade}anos, então você é <strong>Menor de Idade</strong>.`
+            }else if(dade >= 18){
+                res.innerHTML = `A sua idade é ${dade} anos, então você está na categoria de <strong>ADULTO</strong>`
+            }
         }
+    
     </script>
-
 </body>
 </html>
