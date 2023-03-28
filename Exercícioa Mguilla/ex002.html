@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Número Maior</title>
+</head>
+<body>
+    <h1>Definir o maior número</h1>
+
+    <div id="res" >
+        <p>O resultado aqui:</p>
+    </div>
+    <script>
+        var a = Number(prompt('Informe um número'))
+        var b = Number(prompt('Informe o segundo número'))
+        var c = Number(prompt('Informe o terceiro número'))
+        var maior = ''
+        var res = window.document.getElementById('res')
+
+        if(a>b && a >c){
+            maior = a
+
+        }else if( b>a && a> c){
+            maior = b
+        }else{
+            maior = c
+        }
+        res.innerHTML = `Os números informados foram: ${a}, ${b} e ${c}. O maior valor é o número ${maior}.`
+    </script>
+</body>
+</html>
