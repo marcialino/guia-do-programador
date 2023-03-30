@@ -7,15 +7,39 @@
     <title>Sequência de Fibonacci</title>
 </head>
 <body>
+
     <h1>Sequência de Fibonacci</h1>
 
+    <div>
+    <p>Exibir até o termo: <input type="number" name="qnum" id="qnum" >
+        <p><input type="button" name="btn" id="btn" value="Exibir" onclick="calcular()"></p>
+    </div>
+
+    <div id="res">
+        <p></p>
+    </div>
     <script>
-        var n1 = 0
-        var ben = ""
-    for( var c = n1; c< 1000; c++){
-        ben+=c
-    }
-    document.write('ben')
+        function calcular(){
+            var qnum = parseInt(document.getElementById('qnum').value)
+            var res = window.document.getElementById('res')
+            var n1 = 0
+            var n2 = 1
+            var nextTerm = ""
+            var numero = [0,1]
+
+        if(qnum <=2){
+            numero = qnum - 1
+
+        }else
+        for(var c=0; c<=qnum; c++){
+            nextTerm = n1 + n2
+            numero.push(nextTerm)
+            n1 = n2
+            n2 = nextTerm
+        }
+        res.innerHTML = `${numero}`
+    }  
+
     </script>
 </body>
 </html>
