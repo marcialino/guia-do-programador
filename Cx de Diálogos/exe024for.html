@@ -10,6 +10,11 @@
     <script>
         var msg = ''
         for(var i = 0; i<10;i++){
+        /*usa esse if para evitar de colocar vírgula depois do 9, que é o último número. O break é usado para evitar colocar dois 9. */    
+            if(i==9){
+                msg+=i
+                break
+            }
             msg +=i + ","
         }
         alert(msg)
