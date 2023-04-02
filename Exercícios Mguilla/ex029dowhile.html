@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaração Do While</title>
+</head>
+<body>
+    <script>
+        var msg = ""
+        var j = 0
+        do{
+            msg +=j + ","
+            j++
+            if(j==10){
+                msg+= j /*para excluir a vírgula depois do 10.*/
+                break
+            }
+        }
+        while(j<=10)
+        alert(msg)
+    </script>
+</body>
+</html>
